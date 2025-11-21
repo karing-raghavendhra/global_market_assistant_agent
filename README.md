@@ -57,7 +57,7 @@ Files & modules visible in the repository (important files shown):
 * `requirements.txt` — Python dependencies.
 * `__pycache__/` and other helper files. ([GitHub][1])
 
-> Note: This structure is based on the repository listing; check the files in your clone for exact content and docstrings. ([GitHub][1])
+
 
 ---
 
@@ -103,9 +103,7 @@ setx OPENAI_API_KEY "sk-..."
 
 2. If any agent requires additional credentials (e.g., paid APIs), add them to `config.py` or the environment as documented in the code.
 
-> If you don't yet have `config.py` values, search the file for `TODO` / `PLACEHOLDER` tokens and replace them with real values. ([GitHub][1])
 
----
 
 ## Quick start / Usage
 
@@ -126,7 +124,7 @@ Behavior depends on the implementation of those scripts — they will typically:
 * instantiate agents (market research, regulatory, etc.)
 * run a sample workflow (e.g., generate a market entry brief)
 
-If the script accepts arguments (e.g., `--country` or `--product`), you can pass them on the command line. If unsure, open the file header and README TODOs in the repository for precise instructions. ([GitHub][1])
+
 
 ---
 
@@ -138,7 +136,7 @@ If the script accepts arguments (e.g., `--country` or `--product`), you can pass
 4. **LLM / tool integration**: `langchain_agent.py` provides a scaffold to connect to LangChain or other LLM tooling.
 5. **Configuration**: `config.py` centralizes API keys and settings. ([GitHub][1])
 
----
+
 
 ## Development & testing
 
@@ -146,32 +144,6 @@ If the script accepts arguments (e.g., `--country` or `--product`), you can pass
 * Write unit tests for new behavior (create a `tests/` directory).
 * Keep `requirements.txt` in sync when adding dependencies:
 
-```bash
-pip freeze > requirements.txt
-```
-
-* Run linters / formatters (e.g., `black`, `flake8`) if you add them to the toolchain.
-
----
-
-## Contributing
-
-Thanks for considering contributing! A suggested contribution workflow:
-
-1. Fork the repository.
-2. Create a feature branch:
-
-```bash
-git checkout -b feat/your-feature
-```
-
-3. Implement your change and add tests.
-4. Run tests and linters locally.
-5. Submit a pull request describing the change and rationale.
-
-If you'd like help with issues or features, open an issue on the repo and include reproduction steps and expected behavior. ([GitHub][1])
-
----
 
 ## Roadmap / Ideas
 
@@ -181,23 +153,4 @@ If you'd like help with issues or features, open an issue on the repo and includ
 * Add a web UI or Streamlit demo to interactively run market-entry workflows.
 * Add pre-built templates (e.g., `launch_in_india`, `launch_in_eu`) that orchestrate the agents into repeatable workflows.
 
----
 
-## License & credits
-
-I didn't find a license file in the repository listing — please add a `LICENSE` file if you want to make usage permissions explicit. (If you want a recommendation, `MIT` or `Apache-2.0` are common for code examples.) ([GitHub][1])
-
----
-
-## Notes & next steps
-
-* This README is generated from the current repository listing and files present in the project. For the most accurate installation and runtime instructions, please inspect the top-of-file comments and docstrings in `app.py`, `market_entry_app.py`, and `config.py`. ([GitHub][1])
-* If you want, I can:
-
-  * create a `LICENSE` for you (choose MIT / Apache-2.0 / GPL and I'll add a template), or
-  * open a PR that adds this README.md directly to the repo, or
-  * generate example `docker-compose` and `Dockerfile` to containerize the app.
-
-Would you like me to (pick one): **add a LICENSE**, **create a README.md file and show the raw markdown**, **open a PR (I can generate the PR content for you)**, or **produce a Dockerfile + run instructions**?
-
-[1]: https://github.com/karing-raghavendhra/global_market_assistant_agent "GitHub - karing-raghavendhra/global_market_assistant_agent: An AI agent which provides assistance and information to launch your product globally"
